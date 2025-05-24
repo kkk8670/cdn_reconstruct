@@ -1,0 +1,65 @@
+.overview-container {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem;
+    gap: 1rem;
+
+
+    .display-card {
+        display: flex;
+        // flex-direction: column;
+        // margin-bottom: 1rem;
+        padding: 1.2rem;
+
+        border-radius: 0.6rem;
+        background-color: var(--bg-base);
+    }
+
+    .choice-bar {
+        margin-bottom: 1rem;
+    }
+
+    .display-title {}
+
+    .display-box {
+        border-radius: 0.6rem;
+        border: 1px solid var(--border-base);
+        min-width: 0;
+        padding: 1rem;
+    }
+
+    .flow-chart {
+        flex: 2;
+    }
+
+    .flow-list {
+        flex: 1;
+    }
+
+    .monitor-grid {
+        display: flex;
+        // justify-content: space-between;
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .monitor-item {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+
+            // background-color: var(--bg-base);
+            // gap: 8px;
+
+
+            .monitor-label {
+                font-size: 14px;
+                padding-bottom: 1rem;
+            }
+
+            .monitor-value {
+                font-size: 18px;
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
