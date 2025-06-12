@@ -1,4 +1,8 @@
 @use './themes.scss' as theme;
+@use './layout.scss' as *;
+@use './pages.scss' as *;
+@use './components.scss' as *;
+// @use './components.scss' as *;
 
 @tailwind base;
 @tailwind components;
@@ -10,6 +14,7 @@
     padding: 0;
     box-sizing: border-box;
     list-style: none;
+
 }
 
 html,
@@ -19,6 +24,7 @@ body,
     height: 100%;
     font-family: system-ui, sans-serif;
     transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 1rem;
 }
 
 a {

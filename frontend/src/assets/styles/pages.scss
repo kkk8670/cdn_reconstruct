@@ -4,19 +4,18 @@
     margin: 1rem;
     gap: 1rem;
 
-
     .display-card {
         display: flex;
         // flex-direction: column;
         // margin-bottom: 1rem;
         padding: 1.2rem;
-
+        gap: 1rem;
         border-radius: 0.6rem;
         background-color: var(--bg-base);
     }
 
     .choice-bar {
-        margin-bottom: 1rem;
+        font-size: 14px;
     }
 
     .display-title {}
@@ -28,37 +27,42 @@
         padding: 1rem;
     }
 
-    .flow-chart {
+    .metric-chart {
         flex: 2;
     }
 
-    .flow-list {
+    .metric-list {
         flex: 1;
     }
 
-    .monitor-grid {
+    .metric-grid {
         display: flex;
         // justify-content: space-between;
         gap: 1rem;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
 
-        .monitor-item {
+        .metric-item {
             flex: 1;
             display: flex;
             flex-direction: column;
+            gap: 1rem;
 
-            // background-color: var(--bg-base);
-            // gap: 8px;
-
-
-            .monitor-label {
+            .metric-title {
                 font-size: 14px;
-                padding-bottom: 1rem;
             }
 
-            .monitor-value {
-                font-size: 18px;
-                padding-bottom: 1rem;
+            .metric-value {
+                display: inline-flex;
+                align-items: baseline;
+                gap: 6px;
+
+                .metric-num {
+                    font-size: 20px;
+                }
+
+                .metric-unit {
+                    font-size: 14px;
+                }
             }
         }
     }

@@ -1,16 +1,17 @@
 // src/components/Layout/index.tsx
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useLayout } from '@/context/LayoutContext';
 import Header from './Header';
 import Sidebar from './Siderbar';
 import Main from './Main';
-import '@/assets/styles/layout.scss';
 
 const Layout: React.FC = () => {
     const { state, toggleMobileAside } = useLayout();
     const { layoutTheme, device, isMobileAsideShow } = state;
 
-    console.log('当前横竖', layoutTheme.layoutMode);
+    useEffect(() => {
+        console.log('测试，当前横竖', layoutTheme.layoutMode);
+    }, [layoutTheme.layoutMode]);
 
     // 处理移动端遮罩点击
     const handleMobileShadowClick = () => {

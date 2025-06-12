@@ -1,21 +1,16 @@
 import axios from 'axios';
 
-interface DashboardUserResponse {
-    data: {
-        code: number;
-        data: {
-            lastLoginLog: {
-                createDate: string | null;
-                ip: string;
-            };
-            siteCount: number;
-            streamCount: number;
-            suitCount: number;
-            certCount: number;
-        };
-    };
+interface queryElasticParams {
+    uri: string;
+    postData: any; // 可以进一步约束为 Record<string, any>
 }
 
-export const getDashboardUser = (): Promise<DashboardUserResponse> => {
-    return axios.get('/api/cdn/dashboard/user');
+export const queryElastic = async ({ uri, postData }: queryElasticParams) => {
+    const response = await axios.post(
+        '/app/site/query/elk', 
+        {
+            path: uri,
+            param: postData,
+        });
+    return response.data;
 };
